@@ -29,6 +29,7 @@ namespace my_all {
 	const double DLMIN = -1.7e+308;
 
 	const double _eps = 1e-8;
+	const double pi = acos(-1.0);
 
 // Non-class(Non-struct) functions
 
@@ -1458,9 +1459,8 @@ namespace my_all {
 
 		public:
 #define is(what)
-			is(member) mapped_type operator[](int pos)
-			{
-				
+			is(member) mapped_type operator[](int pos) {
+
 			}
 	};
 
@@ -1538,7 +1538,7 @@ namespace my_all {
 
 
 ////////////////////////////////////////////////
-// File: my_defines ////////////////////////////
+// File: my_defines.h //////////////////////////
 ////////////////////////////////////////////////
 
 // This file is for all the defines
@@ -1548,6 +1548,178 @@ namespace my_all {
 
 #define FILE_CLOSE_C(in, out) {fclose(in); fclose(out);}
 #define FILE_CLOSE_CPP(in, out) {in.close(); out.close();}
+
+}
+
+// end file
+
+
+
+////////////////////////////////////////////////
+// File: graph.h //////////////////////////////
+////////////////////////////////////////////////
+
+namespace my_all {
+
+	class basic_graph {
+		protected:
+			string graph_name;
+		public:
+			basic_graph() {};
+	};
+
+	template <class T = int> class Rectangle : protected basic_graph {
+		public:
+			typedef T value_type;
+
+		protected:
+			T Long, Width;
+
+		public:
+			Rectangle() : Long(value_type()), Width(value_type()) {
+				graph_name = "rectangle";
+			}
+			Rectangle(value_type _long, value_type _width) : Long(_long), Width(_width) {
+				graph_name = "rectangle";
+			}
+
+			value_type get_long() {
+				return Long;
+			}
+			value_type get_width() {
+				return Width;
+			}
+			value_type get_area() {
+				return Long * Width;
+			}
+			value_type get_perimeter() {
+				return 2 * (Long + Width);
+			}
+			value_type get_peri() {
+				return get_perimeter();
+			}
+			string get_graph_name() {
+				return graph_name;
+			}
+			char* get_graph_name_c() {
+				return graph_name.c_str();
+			}
+	};
+
+	typedef Rectangle<> rectangle_int;
+	typedef rectangle_int rec_int;
+	typedef Rectangle<long long> rectangle_ll;
+	typedef rectangle_ll rec_ll;
+	typedef Rectangle<double> rectangle_double;
+	typedef rectangle_double rec_double;
+	typedef Rectangle<bign> rectangle_bign;
+	typedef rectangle_bign rec_bign;
+
+	template <class T = int> class Square : protected Rectangle<T>, basic_graph {
+		public:
+			typedef typename Rectangle<T>::value_type value_type;
+
+		protected:
+			value_type edge_length;
+
+		public:
+			Square() : Rectangle<T>::Rectangle(), edge_length(value_type()) {
+				graph_name = "square";
+			}
+			Square(value_type edge) : Rectangle<T>::Rectangle(edge, edge), edge_length(edge) {
+				graph_name = "square";
+			}
+
+			value_type get_area() {
+				return edge_length * edge_length;
+			}
+			value_type get_perimeter() {
+				return edge_length * value_type(4);
+			}
+			value_type get_peri() {
+				return get_perimeter;
+			}
+			value_type get_edge() {
+				return edge_length;
+			}
+			string get_graph_name() {
+				return graph_name;
+			}
+			char* get_graph_name_c() {
+				return graph_name.c_str();
+			}
+	};
+
+	typedef Square<> square_int;
+	typedef Square<long long> square_ll;
+	typedef Square<double> square_double;
+	typedef Square<bign> square_bign;
+
+	template <class T = double> class Circle : protected basic_graph {
+		public:
+			typedef T value_type;
+
+		protected:
+			value_type radius;
+			int point_len;
+		public:
+			value_type pi;
+
+		public:
+			Circle() : radius(value_type()), point_len(10), pi(acos(-1.0)) {
+				graph_name = "circle";
+			}
+			Circle(value_type rad, int set_point = 10) : radius(rad), point_len(set_point), pi(acos(-1.0)) {
+				point_len = set_point;
+				graph_name = "circle";
+			}
+
+			value_type point_make(value_type x) {
+				return value_type(value_type(floor(x * pow(10.0, point_len))) / pow(10.0, point_len));
+			}
+
+			value_type get_area() {
+				return point_make(radius * radius * pi);
+			}
+			value_type get_perimeter() {
+				return point_make(2.0 * radius * pi);
+			}
+			value_type get_peri() {
+				return get_perimeter();
+			}
+			value_type get_radius() {
+				return radius;
+			}
+			value_type get_rad() {
+				return radius;
+			}
+			value_type get_diameter() {
+				return 2.0 * radius;
+			}
+			value_type get_dia() {
+				return 2.0 * radius;
+			}
+			int get_point() {
+				return point_len;
+			}
+			int get_point_len() {
+				return point_len;
+			}
+			void set_point(int set_point) {
+				assert(set_point >= 0);
+				point_len = set_point;
+			}
+			void set_point_len(int set_point) {
+				assert(set_point >= 0);
+				point_len = set_point;
+			}
+			void set_radius(int rad) {
+				radius = rad;
+			}
+			void set_rad(int rad) {
+				radius = rad;
+			}
+	};
 
 }
 
