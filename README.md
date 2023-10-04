@@ -1,5 +1,19 @@
 ### Hi there 👋
 
+<a href="https://github-readme-stats-one-bice.vercel.app/api?username=oimasterkafuu&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-light-mode-only" target="_blank">
+  <img src="https://github-readme-stats-one-bice.vercel.app/api?username=oimasterkafuu&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-light-mode-only" alt="oimasterkafuu's GitHub stats" height="185px">
+</a>
+<a href="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=oimasterkafuu&layout=compact&langs_count=8&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-light-mode-only">
+  <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=oimasterkafuu&layout=compact&langs_count=8&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-light-mode-only" alt="Top Langs" height="185px">
+</a>
+
+<a href="https://github-readme-stats-one-bice.vercel.app/api?username=oimasterkafuu&theme=calm&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-dark-mode-only" target="_blank">
+  <img src="https://github-readme-stats-one-bice.vercel.app/api?username=oimasterkafuu&theme=calm&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-dark-mode-only" alt="oimasterkafuu's GitHub stats" height="185px">
+</a>
+<a href="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=oimasterkafuu&theme=calm&layout=compact&langs_count=8&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-dark-mode-only">
+  <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=oimasterkafuu&theme=calm&layout=compact&langs_count=8&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-dark-mode-only" alt="Top Langs" height="185px">
+</a>
+
 <!--
 **AppOfficer/AppOfficer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
